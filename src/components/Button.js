@@ -6,7 +6,7 @@ export const Button = styled.button`
     text-transform: uppercase;
     border: none;
     outline: none;
-    margin: ${props => (props.primary ? '0.33%' : '0')};
+    margin: ${props => (props.primary ? '0 33%' : '0')};
     padding: ${props => (props.primary ? '1.5rem' : '0.8rem 1.3rem')};
     border-radius: 0.1875rem;
     color: #fff;

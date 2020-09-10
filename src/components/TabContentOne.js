@@ -9,11 +9,11 @@ function TabContentOne() {
             <div className="container">
                 <div className="tab-content">
                     <div>
-                        <span style={{marginBottom: '2rem'}}>
+                        <span style={{ marginBottom: '2rem' }}>
                             If you decide Netflix isn't for you - no problem. No Commitment.
                             Cancel online anytime.</span>
                         <br />
-                        <Button style={{marginTop: '2rem'}}>try it now</Button>
+                        <Button style={{ marginTop: '2rem' }}>try it now</Button>
                     </div>
                     <img src={Img} />
                 </div>
