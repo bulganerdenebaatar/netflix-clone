@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import logo from '../svg/logo.svg';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { Button } from './Button';
 import styled from 'styled-components';
 import { Icon } from 'react-icons-kit';
@@ -9,7 +9,7 @@ import { ic_keyboard_arrow_right } from 'react-icons-kit/md/ic_keyboard_arrow_ri
 class Header extends Component {
     render() {
         return (
-            <HeaderComponent className="header-container">
+            <HeaderContainer className="header-container">
                 <div className="header-top">
                     <Logo src={logo} />
                     <NavLink className="signIn-btn" to="/">Sign In</NavLink>
@@ -18,11 +18,11 @@ class Header extends Component {
                 <div className="header-content">
                     <Title> See What's Next</Title>
                     <SubTitle>WATCH ANYWHERE. CANCEL ANYTIME.</SubTitle>
-                    <Link className="main-offer-btn" primary>try it now
-                    <Icon className="Icon" icon={ic_keyboard_arrow_right} ze={37} />
-                    </Link>
+                    <Button className="main-offer-btn" primary>try it now
+                    <Icon className="Icon" icon={ic_keyboard_arrow_right} size={37} />
+                    </Button>
                 </div>
-            </HeaderComponent>
+            </HeaderContainer>
         );
     }
 }
@@ -37,13 +37,18 @@ const Logo = styled.img`
     top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
+    margin-left: 0;
 `;
 
 // Header Container
-const HeaderComponent = styled.div`
+const HeaderContainer = styled.header`
+.Icon svg {
+    vertical-align: bottom !important;
+    margin-left: 1.5rem;
+}
     .signIn-btn {
         right: 0;
-        margin: 1.123rem 3% 0;
+        margin: 1.125rem 3% 0;
         padding: 0.4375rem 1.0625rem;
         font-weight: 400;
         line-height: normal;
@@ -55,7 +60,7 @@ const HeaderComponent = styled.div`
         cursor: pointer;
         transition: background 0.2s ease-in;
         &:hover {
-            background: var(--main-red-hover);
+            background: #d30913;
         }
     }
     
@@ -63,7 +68,7 @@ const HeaderComponent = styled.div`
     .header-top {
         position: relative;
         height: 10rem;
-        z-index: 1;
+        z-index: 2;
     }
 
     // Header Content
@@ -76,14 +81,9 @@ const HeaderComponent = styled.div`
         align-content: center;
         text-align: center;
         flex-direction: column;
-        z-index: 1;
+        z-index: 2;
     }
-
-    .Icon svg {
-        vertical-align: bottom;
-        margin-left: 1.5rem;
-    }
-    `;
+`;
 
     // Main Title
     const Title = styled.h1`
