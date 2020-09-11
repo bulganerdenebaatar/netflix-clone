@@ -28,7 +28,7 @@ function TabContentThree() {
                             <tr>
                                 <td>Monthly price</td>
                                 <td>$9.99</td>
-                                <td>#13.99</td>
+                                <td>$13.99</td>
                                 <td>$16.99</td>
                             </tr>
                             <tr>
@@ -89,7 +89,7 @@ const TabContainer = styled.div`
  .tab-top-content {
      display: grid;
      gid-template-columns: repeat(12, 1fr);
-     paddding: 3rem 0 0;
+     padding: 3rem 0 0;
  }
 
  span {
@@ -109,7 +109,7 @@ const TabContainer = styled.div`
 
  // Table
  table {
-     width: 100$;
+     width: 100%;
      margin-top: 2rem;
      border-collapse: collapse;
  }

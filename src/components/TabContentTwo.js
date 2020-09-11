@@ -26,16 +26,14 @@ function TabContentTwo() {
                     {/* Tablet Image Container */}
                     <div>
                         <img src={ImgTablet} style={{width: '18.75rem', paddingTop: '0.625rem'}}/>
-                        <h3>Watch on your TV</h3>
-                        <p>Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and
-                            more.</p>
+                        <h3>Watch instantly or download for later</h3>
+                        <p>Available on phone and tablet, wherever you go.</p>
                     </div>
                     {/* Macbook Image Container */}
                     <div>
                         <img src={ImgMacbook} style={{width: '18.75rem', paddingTop: '0.625rem', paddingBottom:'0.625rem'}}/>
-                        <h3>Watch on your TV</h3>
-                        <p>Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and
-                            more.</p>
+                        <h3>Use any computer</h3>
+                        <p>Watch right on Netflix.com.</p>
                     </div>
                 </div>
             </div>
@@ -47,7 +45,7 @@ export default TabContentTwo;
 
 // Main Tab Content Container
 const TabContainer = styled.div`
-    background: var(--main-depp-dark);
+    background: var(--main-deep-dark);
 
     .tab-content {
         margin: 0 15%;
@@ -59,7 +57,7 @@ const TabContainer = styled.div`
         grid-template-columns: repeat(12, 1fr);
         justify-content: center;
         align-item: center;
-        papdding: 2.5rem 0;
+        padding: 2.5rem 0;
     }
 
     span {
