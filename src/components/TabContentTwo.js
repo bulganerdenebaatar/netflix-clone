@@ -1,10 +1,11 @@
 import React from 'react'
 import { Button } from './Button'
 import styled from 'styled-components';
-import ImgTv from '../images/tab-tv.png'
-import ImgTablet from '../images/tab-tablet.png'
-import ImgMacbook from '../images/tab-macbook.png'
-import { generateMedia } from 'styled-media-query'
+import ImgTv from '../images/tab-tv.png';
+import ImgTablet from '../images/tab-tablet.png';
+import ImgMacbook from '../images/tab-macbook.png';
+import { Link } from 'react-router-dom';
+import { generateMedia } from 'styled-media-query';
 
 function TabContentTwo() {
     return (
@@ -13,7 +14,9 @@ function TabContentTwo() {
                 <div className="tab-top-content">
                     <span style={{ fontSize: '1.5rem'}}>Watch TV shows and movies anytime, anywhere -
                         personalized for you.</span>
-                    <Button className="btn">try it now</Button>
+                    <Link className="btn" to="/choose-plan">
+                    <Button>try it now</Button>
+                    </Link>
                 </div>
                 {/* Tab Bottom Content */}
                 <div className="tab-bottom-content">

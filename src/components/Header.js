@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import logo from '../svg/logo.svg';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { Button } from './Button';
 import styled from 'styled-components';
 import { Icon } from 'react-icons-kit';
@@ -12,18 +12,22 @@ class Header extends Component {
         return (
             <HeaderContainer className="header-container">
                 <div className="header-top">
-                    <Logo src={logo} />
-                    <NavLink className="signIn-btn" to="/">Sign In</NavLink>
+                    <Link to="/">
+                        <Logo className="logo" src={logo} />
+                    </Link>
+                    <NavLink className="btn signIn-btn" to="/login">Sign In</NavLink>
                 </div>
                 { /* Header Content */}
                 <div className="header-content">
                     <Title> See What's Next</Title>
                     <SubTitle>WATCH ANYWHERE. CANCEL ANYTIME.</SubTitle>
-                    <Button className="main-offer-btn" primary>try it now
-                    <Icon className="Icon" icon={ic_keyboard_arrow_right} size={37} />
-                    </Button>
+                    <Link to="choose-plan">
+                        <Button className="main-offer-btn" primary>try it now
+                        <Icon className="Icon" size={37} icon={ic_keyboard_arrow_right} size={37} />
+                        </Button>
+                    </Link>
                 </div>
-            </HeaderContainer>
+            </HeaderContainer>  
         );
     }
 }
